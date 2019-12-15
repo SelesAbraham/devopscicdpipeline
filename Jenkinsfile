@@ -12,7 +12,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("SelesAbraham/TestDevOpsPipeline")
+        app = docker.build("SelesAbraham/devopscicdpipeline")
     }
 
     stage('Test image') {

@@ -14,16 +14,16 @@ node {
 
         //app = docker.build("SelesAbraham/devopscicdpipeline")
         //sh './dockerBuild.sh'
-        docker.build("myimage") 
+        app = docker.build("myimage") 
     }
 
     stage('Test image') {
         /* Ideally, we would run a test framework against our image.
          * For this example, we're using a Volkswagen-type approach ;-) */
 
-        app.inside {
-            sh 'echo "Tests passed"'
-        }
+        // app.inside {
+        //     sh 'echo "Tests passed"'
+        // }
     }
 
     stage('Push image') {

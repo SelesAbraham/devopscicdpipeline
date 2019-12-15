@@ -2,8 +2,7 @@
 FROM ubuntu:18.04
 
 #some_ important _library
-RUN apt-get install wget build-essential gcc make -y \
-    common-software-properties -y
+RUN apt-get install wget build-essential gcc make -y \ common-software-properties -y
 #Install_JAVA
 RUN apt-get install default-jdk -y
 RUN apt-get install openjdk-8-jre -y

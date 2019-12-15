@@ -36,4 +36,13 @@ node {
             app.push("latest")
         }
     }
+
+     stage('Kubernetes Setup'){
+        try{
+            sh("kubectl create -f app-deployment.yml -v=8")
+        } catch(e) {
+            notify("Something failed Kubernetes Setup")
+            throw e;
+        }
+    }
 }

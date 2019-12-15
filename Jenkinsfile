@@ -14,7 +14,7 @@ node {
 
         //app = docker.build("SelesAbraham/devopscicdpipeline")
         //sh './dockerBuild.sh'
-        docker.build
+        docker.build("My image")
     }
 
     stage('Test image') {

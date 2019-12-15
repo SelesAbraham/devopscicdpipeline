@@ -12,9 +12,9 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        //app = docker.build("SelesAbraham/devopscicdpipeline")
+        //app = docker.build("selesabraham/myimage")
         //sh './dockerBuild.sh'
-        app = docker.build("myimage") 
+        app = docker.build("selesabraham/myimage") 
     }
 
     stage('Test image') {

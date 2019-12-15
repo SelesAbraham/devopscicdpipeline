@@ -37,5 +37,13 @@ node {
         }
     }
 
-    
+     stage('Kubernetes Setup'){
+        try{
+            //sh("kubectl create -f app-deployment.yml -v=8")
+            sh("kubectl get ns development || kubectl create ns development")
+        } catch(e) {
+            notify("Something failed Kubernetes Setup")
+            throw e;
+        }
+    }
 }

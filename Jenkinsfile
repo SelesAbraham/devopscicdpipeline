@@ -14,7 +14,7 @@ node {
 
         //app = docker.build("SelesAbraham/devopscicdpipeline")
         //sh './dockerBuild.sh'
-        docker.build("myimage") --no-cache=true 
+        docker.build("myimage") 
     }
 
     stage('Test image') {

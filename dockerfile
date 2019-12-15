@@ -4,7 +4,7 @@ FROM ubuntu:18.04
 #some_ important _library
 RUN apt-get update && apt-get install wget build-essential gcc make -y
 RUN echo "echo one"
-RUN apt-get install common-software-properties  -y
+#RUN apt-get install common-software-properties  -y
 #RUN apt-get install -y --no-install-recommends software-properties-common
 #Install_JAVA
 RUN apt-get install default-jdk -y

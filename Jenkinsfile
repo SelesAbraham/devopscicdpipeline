@@ -13,7 +13,8 @@ node {
          * docker build on the command line */
 
         //app = docker.build("SelesAbraham/devopscicdpipeline")
-        sh './dockerBuild.sh'
+        //sh './dockerBuild.sh'
+        docker.build()
     }
 
     stage('Test image') {

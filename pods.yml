@@ -10,3 +10,6 @@ spec:
       image: selesabraham/elasticsearchimage:latest
       ports:
         - containerPort: 8080
+       # Just spin & wait forever
+      command: [ "/bin/bash", "-c", "--" ]
+      args: [ "while true; do sleep 30; done;" ]

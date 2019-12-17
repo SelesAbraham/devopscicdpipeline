@@ -11,7 +11,7 @@ RUN apk update
 RUN apk fetch openjdk8 
 # RUN apt-get install openjdk-8-jre -y
 # RUN apt-get update
-RUN wget -O - https://packages.elastic.co/GPG-KEY-elasticsearch | apk add -
+RUN wget -O - https://packages.elastic.co/GPG-KEY-elasticsearch 
 RUN echo  "deb  http://packages.elastic.co/elasticsearch/2.x/debian stable main" | tee -a /etc/apt/sources.list.d/elasticsearch-2.x.list
 RUN apk update &&  apk fetch elasticsearch 
 # RUN apt-get install git -y

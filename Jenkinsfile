@@ -40,7 +40,7 @@ node {
      stage('Kubernetes Setup'){
          sshagent(['instance-1']) {
             echo "in instance-1"
-            sh "scp -o StrictHostKeyChecking=no services.yml node-app-pod.yml rsa-key-20191217@104.154.226.125:/home/instance-1/"
+            sh "scp -o StrictHostKeyChecking=no services.yml node-app-pod.yml rsa-key-20191217@instance-1:/home/instance-1/"
             echo "before scripts"
             script{
                 try{

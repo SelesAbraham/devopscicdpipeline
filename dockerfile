@@ -7,6 +7,7 @@ FROM alpine:3.7
 #RUN apt-get install common-software-properties  -y
 #RUN apt-get install -y --no-install-recommends software-properties-common
 #Install_JAVA
+RUN apk update
 RUN apk fetch openjdk8 
 # RUN apt-get install openjdk-8-jre -y
 # RUN apt-get update

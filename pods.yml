@@ -8,7 +8,6 @@ spec:
   containers:
     - name: elasticsearchcontainer
       image: selesabraham/elasticsearch:latest
-      command: ["printenv"]
-      args: ["-c", "sleep 10 && echo Sleep expired > /var/log/containers/dt.log"]
-  terminationMessagePath: "/var/log/containers/dt.log"
+      command: ["/bin/sh"]
+      args: ["-c", "sleep 10 && echo Sleep expired > /dev/termination-log"]
       

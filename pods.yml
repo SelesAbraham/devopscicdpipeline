@@ -9,4 +9,4 @@ spec:
     - name: elasticsearch
       image: selesabraham/elasticsearchimage:tagVersion
       ports:
-        - containerPort: 8080
+        - containerPort: 36885

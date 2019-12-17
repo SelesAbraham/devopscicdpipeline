@@ -9,13 +9,13 @@ RUN echo "echo one"
 #Install_JAVA
 RUN apt-get install default-jdk -y
 RUN apt-get install openjdk-8-jre -y
-RUN apt-get update
+# RUN apt-get update
 RUN wget -O - https://packages.elastic.co/GPG-KEY-elasticsearch | apt-key add -
 RUN echo  "deb  http://packages.elastic.co/elasticsearch/2.x/debian stable main" | tee -a /etc/apt/sources.list.d/elasticsearch-2.x.list
 RUN apt-get update &&  apt-get install elasticsearch -y
-RUN apt-get install git -y
-RUN apt-get install python2.7 -y
-RUN apt-get install vim  -y
+# RUN apt-get install git -y
+# RUN apt-get install python2.7 -y
+# RUN apt-get install vim  -y
 #configuration_to_PubilsOverSSH
 RUN apt-get update && apt-get install -y openssh-server
 RUN mkdir /var/run/sshd

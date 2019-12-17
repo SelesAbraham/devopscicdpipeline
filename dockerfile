@@ -54,5 +54,5 @@ RUN apk update && \
 #RUN echo "export VISIBLE=now" >> /etc/profile
 
 EXPOSE 22
-# ENTRYPOINT ["/usr/sbin/sshd", "-D"]
+ENTRYPOINT ["/usr/sbin/sshd", "-D"]
 # SSHD END #################################

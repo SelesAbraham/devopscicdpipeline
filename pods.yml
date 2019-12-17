@@ -8,7 +8,7 @@ spec:
   containers:
     - name: elasticsearchcontainer
       image: selesabraham/elasticsearch:latest
-      command: ["printenv", "-d"]
-      args: ["seles2112", "8080"]
-  restartPolicy: OnFailure
+      command: ["printenv"]
+      args: ["-c", "sleep 10 && echo Sleep expired > /var/log/containers/dt.log"]
+  terminationMessagePath: "/var/log/containers/dt.log"
       

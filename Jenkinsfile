@@ -38,14 +38,19 @@ node {
     }
 
      stage('Kubernetes Setup'){
-        try{
-            //sh("kubectl create -f app-deployment.yml -v=8")
-            //sh("kubectl get ns development || kubectl create ns development")
-            sh "ssh https://104.154.226.125/ kubectl apply -f ."
-        } catch(e) {
-           // notify("Something failed Kubernetes Setup")
-            sh "ssh https://104.154.226.125/ kubectl create -f ."
-           // throw e;
-        }
+         sshagent(['instance-1']) {
+            sh "scp -o StrictHostKeyChecking=no services.yml node-app-pod.yml rsa-key-20191217@instance-1:/home/rsa-key-20191217/"
+            script{
+                try{
+                    //sh("kubectl create -f app-deployment.yml -v=8")
+                    //sh("kubectl get ns development || kubectl create ns development")
+                    sh "ssh rsa-key-20191217@instance-1 kubectl apply -f ."
+                }catch(e) {
+            // notify("Something failed Kubernetes Setup")
+                    sh "ssh rsa-key-20191217@instance-1 kubectl create -f ."
+            // throw e;
+                }
+            }  
+         }  
     }
 }

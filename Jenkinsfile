@@ -56,7 +56,7 @@ node {
                     //sh "ssh rsa-key-20191217@instance-1 kubectl create -f ."
                     echo "created"
                     //sh "ssh seles2112@instance-1 kubectl apply -f ."
-                    sh "ssh seles2112@104.154.226.125 kubectl apply -f ."
+                    sh "ssh seles2112@104.154.226.125 kubectl create -f ."
             // throw e;
                 }
             }  

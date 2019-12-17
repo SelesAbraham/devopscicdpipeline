@@ -40,10 +40,12 @@ node {
      stage('Kubernetes Setup'){
         try{
             //sh("kubectl create -f app-deployment.yml -v=8")
-            sh("kubectl get ns development || kubectl create ns development")
+            //sh("kubectl get ns development || kubectl create ns development")
+            sh "ssh https://104.154.226.125/ kubectl apply -f ."
         } catch(e) {
-            notify("Something failed Kubernetes Setup")
-            throw e;
+           // notify("Something failed Kubernetes Setup")
+            sh "ssh https://104.154.226.125/ kubectl create -f ."
+           // throw e;
         }
     }
 }

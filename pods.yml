@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: elasticsearch
+  labels:
+    app: elastcisearch
+spec:
+  containers:
+    - name: elasticsearch
+      image: selesabraham/elasticsearchimage:tagVersion
+      ports:
+        - containerPort: 8080

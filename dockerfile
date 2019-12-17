@@ -2,7 +2,7 @@
 #FROM ubuntu:18.04
 FROM alpine:3.7
 #some_ important _library
-RUN apk update && apk fetch wget build-essential gcc make -y
+#RUN apk update && apk fetch wget build-essential gcc make -y
 # RUN echo "echo one"
 #RUN apt-get install common-software-properties  -y
 #RUN apt-get install -y --no-install-recommends software-properties-common

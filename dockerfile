@@ -19,6 +19,7 @@ RUN apk update &&  apk fetch elasticsearch
 # RUN apt-get install vim  -y
 #configuration_to_PubilsOverSSH
 #RUN apt-get update && apt-get install -y openssh-server
+RUN apk add openssh
 RUN mkdir /var/run/sshd
 RUN apk add --no-cache openrc
 RUN rc-update add sshd

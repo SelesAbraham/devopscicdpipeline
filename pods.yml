@@ -7,6 +7,6 @@ metadata:
 spec:
   containers:
     - name: elasticsearch
-      image: selesabraham/elasticsearchimage:tagVersion
+      image: selesabraham/elasticsearchimage
       ports:
         - containerPort: 8080

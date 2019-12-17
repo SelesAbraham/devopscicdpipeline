@@ -14,7 +14,7 @@ node {
 
         //app = docker.build("selesabraham/myimage")
         //sh './dockerBuild.sh'
-        app = docker.build("selesabraham/elasticsearchimage") 
+        app = docker.build("selesabraham/elasticsearch") 
     }
 
     stage('Test image') {

@@ -39,20 +39,24 @@ node {
 
      stage('Kubernetes Setup'){
          sshagent(['instance-1']) {
-            sh "scp -o StrictHostKeyChecking=no services.yml node-app-pod.yml seles2112@instance-1:/home/instance-1/"
+            echo "in instance-1"
+            sh "scp -o StrictHostKeyChecking=no services.yml node-app-pod.yml rsa-key-20191217@instance-1:/home/instance-1/"
+            echo "before scripts"
             script{
                 try{
                     //sh("kubectl create -f app-deployment.yml -v=8")
                     //sh("kubectl get ns development || kubectl create ns development")
-                    //sh "ssh rsa-key-20191217@instance-1 kubectl apply -f ."
-                    sh "ssh seles2112@instance-1kubectl apply -f ."
-                    //sh "ssh rsa-key-20191217@104.154.226.125 kubectl apply -f ."
+                    sh "ssh rsa-key-20191217@instance-1 kubectl apply -f ."
+                    echo "get"
+                    // sh "ssh seles2112@instance-1kubectl apply -f ."
+                    // sh "ssh rsa-key-20191217@104.154.226.125 kubectl apply -f ."
                     
                 }catch(e) {
             // notify("Something failed Kubernetes Setup")
-                    //sh "ssh rsa-key-20191217@instance-1 kubectl create -f ."
-                    sh "ssh seles2112@instance-1kubectl apply -f ."
-                    //sh "ssh rsa-key-20191217@104.154.226.125 kubectl apply -f ."
+                    sh "ssh rsa-key-20191217@instance-1 kubectl create -f ."
+                    echo "created"
+                    // sh "ssh seles2112@instance-1kubectl apply -f ."
+                    // sh "ssh rsa-key-20191217@104.154.226.125 kubectl apply -f ."
             // throw e;
                 }
             }  

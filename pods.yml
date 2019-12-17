@@ -8,6 +8,7 @@ spec:
   containers:
     - name: elasticsearch
       image: selesabraham/elasticsearch:latest
-      ports:
-        - containerPort: 8080
+      command: ["printenv"]
+      args: ["seles2112", "8080"]
+  restartPolicy: OnFailure
       

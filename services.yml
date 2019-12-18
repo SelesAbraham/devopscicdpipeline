@@ -2,13 +2,12 @@ kind: Service
 apiVersion: v1
 metadata:
   name: elasticsearch
-spec:
-  replicas: 2
-  selector:
-    app: elasticsearchcontainer
+spec:   
   ports:
   - port: 80
-    protocol: TCP
     targetPort: 3000
+    protocol: TCP  
+  selector:
+    app: elasticsearch  
   type: LoadBalancer  
   

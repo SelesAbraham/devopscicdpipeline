@@ -7,7 +7,8 @@ spec:
     app: elasticsearch
   ports:
   - protocol: TCP
-    port: 80
+    nodePort: 32444
+    port: 8080
     targetPort: 8080
   type: NodePort
   

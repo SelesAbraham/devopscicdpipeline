@@ -53,7 +53,7 @@ RUN apk update && \
 #ENV NOTVISIBLE "in users profile"
 #RUN echo "export VISIBLE=now" >> /etc/profile
 
-EXPOSE 22
+EXPOSE 3000
 # CMD ["/usr/sbin/sshd", "-D"]
 # RUN service ssh restart
 # RUN echo "finished"

@@ -9,6 +9,6 @@ spec:
     - name: elasticsearch
       image: selesabraham/elasticsearch:latest
       ports:
-        - containerPort: 8080
+        - containerPort: 3000
       command: ["/bin/sh"]
       args: ["-c", "sleep 500 && echo Sleep expired > /dev/termination-log"]

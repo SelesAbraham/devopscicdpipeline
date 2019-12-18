@@ -9,5 +9,5 @@ spec:
     protocol: TCP  
   selector:
     app: elasticsearch  
-  type: LoadBalancer  
+  type: NodePort  
   

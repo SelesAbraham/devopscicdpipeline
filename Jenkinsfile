@@ -40,7 +40,7 @@ node {
      stage('Kubernetes Setup'){
          sshagent(['instance-2']) {
             echo "in instance-2"
-            sh "scp -o StrictHostKeyChecking=no services.yml pods.yml seles2112@35.188.47.49:/home/seles2112/"
+            sh "scp -o StrictHostKeyChecking=no services.yml pods.yml seles2112@35.223.40.2:/home/seles2112/"
             echo "before scripts"
             script{
                 try{
@@ -49,14 +49,14 @@ node {
                     //sh "ssh rsa-key-20191217@instance-1 kubectl apply -f ."
                     echo "get"
                     //sh "ssh seles2112@instance-1 kubectl apply -f ."
-                    sh "ssh seles2112@35.188.47.49 kubectl apply -f ."
+                    sh "ssh seles2112@35.223.40.2 kubectl apply -f ."
                     
                 }catch(e) {
             // notify("Something failed Kubernetes Setup")
                     //sh "ssh rsa-key-20191217@instance-1 kubectl create -f ."
                     echo "created"
                     //sh "ssh seles2112@instance-1 kubectl apply -f ."
-                    sh "ssh seles2112@35.188.47.49 kubectl create -f ."
+                    sh "ssh seles2112@35.223.40.2 kubectl create -f ."
             // throw e;
                 }
             }  

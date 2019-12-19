@@ -38,8 +38,8 @@ node {
     }
 
      stage('Kubernetes Setup'){
-         sshagent(['instance-1']) {
-            echo "in instance-1"
+         sshagent(['instance-2']) {
+            echo "in instance-2"
             sh "scp -o StrictHostKeyChecking=no services.yml pods.yml seles2112@35.188.47.49:/home/seles2112/"
             echo "before scripts"
             script{

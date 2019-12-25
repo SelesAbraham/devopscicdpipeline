@@ -45,11 +45,11 @@ node {
             script{
                 try{
                     //sh("kubectl create -f app-deployment.yml -v=8")
-                    //sh("kubectl get ns development || kubectl create ns development")
+                    sh("kubectl get ns development || kubectl create ns development")
                     //sh "ssh rsa-key-20191217@instance-1 kubectl apply -f ."
                     echo "get"
                     //sh "ssh seles2112@instance-1 kubectl apply -f ."
-                    sh "ssh seles2112@35.239.96.97 kubectl apply -f ."
+                    //sh "ssh seles2112@35.239.96.97 kubectl apply -f ."
                     
                 }catch(e) {
             // notify("Something failed Kubernetes Setup")

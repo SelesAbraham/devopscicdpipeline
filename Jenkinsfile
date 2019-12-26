@@ -45,18 +45,18 @@ node {
             script{
                 try{
                     //sh("kubectl create -f app-deployment.yml -v=8")
-                    sh("kubectl get ns default || kubectl create ns default")
+                    //sh("kubectl get ns default || kubectl create ns default")
                     //sh "ssh rsa-key-20191217@instance-1 kubectl apply -f ."
                     echo "get"
                     //sh "ssh seles2112@instance-1 kubectl apply -f ."
-                    //sh "ssh seles2112@35.239.96.97 kubectl apply -f ."
+                    sh "ssh seles2112@35.239.96.97 kubectl apply -f ."
                     
                 }catch(e) {
-             notify("Something failed Kubernetes Setup")
+             //notify("Something failed Kubernetes Setup")
                     //sh "ssh rsa-key-20191217@instance-1 kubectl create -f ."
                     echo "created"
                     //sh "ssh seles2112@instance-1 kubectl apply -f ."
-                    //sh "ssh seles2112@35.239.96.97 kubectl create -f ."
+                    sh "ssh seles2112@35.239.96.97 kubectl create -f ."
             // throw e;
                 }
             }  

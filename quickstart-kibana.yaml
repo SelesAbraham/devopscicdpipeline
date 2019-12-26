@@ -7,3 +7,4 @@ spec:
   count: 1
   elasticsearchRef:
     name: quickstart
+  type: NodePort

@@ -3,11 +3,11 @@ kind: Kibana
 metadata:
   name: elasticsearch
 spec:
-  version: 7.5.0
-  nodeCount: 1
+  version: 7.5.1
+  count: 1
   elasticsearchRef:
     name: elasticsearch
-  podTemplates:
-      spec:
-        containers:
-        - name: kibana
+  # podTemplates:
+  #     spec:
+  #       containers:
+  #       - name: kibana

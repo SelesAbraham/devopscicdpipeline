@@ -4,7 +4,7 @@ metadata:
   name: elasticsearch
 spec:
   version: 7.5.0
-  count: 1
+  nodeCount: 1
   elasticsearchRef:
     name: elasticsearch
   podTemplates:

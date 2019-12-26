@@ -10,4 +10,5 @@ spec:
       image: selesabraham/elasticsearch:latest
       ports:
         - containerPort: 8080
-
+      command: [ "/bin/bash", "-c", "--" ]
+      args: [ "while true; do sleep 30; done;" ]

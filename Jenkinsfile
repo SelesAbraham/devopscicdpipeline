@@ -49,6 +49,7 @@ node {
                     //sh "ssh rsa-key-20191217@instance-1 kubectl apply -f ."
                     echo "get"
                     //sh "ssh seles2112@instance-1 kubectl apply -f ."
+                    sh "ssh seles2112@35.239.96.97  kubectl apply -f https://download.elastic.co/downloads/eck/1.0.0-beta1/all-in-one.yaml"
                     sh "ssh seles2112@35.239.96.97 kubectl apply -f ."
                     
                 }catch(e) {

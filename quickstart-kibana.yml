@@ -1,4 +1,3 @@
-cat <<EOF | kubectl apply -f -
 apiVersion: kibana.k8s.elastic.co/v1beta1
 kind: Kibana
 metadata:
@@ -8,4 +7,3 @@ spec:
   count: 1
   elasticsearchRef:
     name: quickstart
-EOF

@@ -49,14 +49,14 @@ node {
                     //sh "ssh rsa-key-20191217@instance-1 kubectl apply -f ."
                     echo "get"
                     //sh "ssh seles2112@instance-1 kubectl apply -f ."
-                    sh "ssh seles2112@instance-2 kubectl apply -f ."
+                    sh "ssh seles2112@35.239.96.97 kubectl apply -f ."
                     
                 }catch(e) {
             // notify("Something failed Kubernetes Setup")
                     //sh "ssh rsa-key-20191217@instance-1 kubectl create -f ."
                     echo "created"
                     //sh "ssh seles2112@instance-1 kubectl apply -f ."
-                    sh "ssh seles2112@instance-2 kubectl create -f ."
+                    sh "ssh seles2112@35.239.96.97 kubectl create -f ."
             // throw e;
                 }
             }  

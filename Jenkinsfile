@@ -45,7 +45,7 @@ node {
             script{
                 try{
                     //sh("kubectl create -f app-deployment.yml -v=8")
-                    //sh("kubectl get ns development || kubectl create ns development")
+                    //sh("kubectl get ns default || kubectl create ns default")
                     //sh "ssh rsa-key-20191217@instance-1 kubectl apply -f ."
                     echo "get"
                     //sh "ssh seles2112@instance-1 kubectl apply -f ."

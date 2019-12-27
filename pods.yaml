@@ -21,4 +21,4 @@ spec:
       args: ["-c", "sleep 500 && echo Sleep expired > /dev/termination-log"]
       envFrom:
         - configMapRef:
-            name: elasticSearch-configmap
+            name: elasticsearch-configmap

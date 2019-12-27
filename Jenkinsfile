@@ -40,7 +40,7 @@ node {
      stage('Kubernetes Setup'){
          sshagent(['instance-2']) {
             echo "in instance-2"
-            sh "scp -o StrictHostKeyChecking=no services.yml pods.yml quickstart-kibana.yaml seles2112@35.239.96.97:/home/seles2112/"
+            sh "scp -o StrictHostKeyChecking=no services.yaml pods.yaml quickstart-kibana.yaml ConfigMap.yaml seles2112@35.239.96.97:/home/seles2112/"
             echo "before scripts"
             script{
                 try{

@@ -19,3 +19,6 @@ spec:
         - containerPort: 8080
       command: ["/bin/sh"]
       args: ["-c", "sleep 500 && echo Sleep expired > /dev/termination-log"]
+      envFrom:
+        - configMapRef:
+            name: elasticSearch-configmap

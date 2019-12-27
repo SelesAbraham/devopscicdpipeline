@@ -39,25 +39,21 @@ node {
 
      stage('Kubernetes Setup'){
          sshagent(['instance-2']) {
-            echo "in instance-2"
-            sh "scp -o StrictHostKeyChecking=no services.yaml pods.yaml quickstart-kibana.yaml ConfigMap.yaml seles2112@35.239.96.97:/home/seles2112/"
-            echo "before scripts"
+            sh "scp -o StrictHostKeyChecking=no services.yaml pods.yaml quickstart-kibana.yaml ConfigMap.yaml seles2112@34.66.33.223:/home/seles2112/"
             script{
                 try{
                     //sh("kubectl create -f app-deployment.yml -v=8")
                     //sh("kubectl get ns default || kubectl create ns default")
                     //sh "ssh rsa-key-20191217@instance-1 kubectl apply -f ."
-                    echo "get"
                     //sh "ssh seles2112@instance-1 kubectl apply -f ."
-                    sh "ssh seles2112@35.239.96.97  kubectl apply -f https://download.elastic.co/downloads/eck/1.0.0-beta1/all-in-one.yaml"
-                    sh "ssh seles2112@35.239.96.97 kubectl apply -f ."
+                    sh "ssh seles2112@34.66.33.223  kubectl apply -f https://download.elastic.co/downloads/eck/1.0.0-beta1/all-in-one.yaml"
+                    sh "ssh seles2112@34.66.33.223 kubectl apply -f ."
                     
                 }catch(e) {
              //notify("Something failed Kubernetes Setup")
                     //sh "ssh rsa-key-20191217@instance-1 kubectl create -f ."
-                    echo "created"
                     //sh "ssh seles2112@instance-1 kubectl apply -f ."
-                    sh "ssh seles2112@35.239.96.97 kubectl create -f ."
+                    sh "ssh seles2112@34.66.33.223 kubectl create -f ."
             // throw e;
                 }
             }  

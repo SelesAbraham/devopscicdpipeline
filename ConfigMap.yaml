@@ -7,7 +7,6 @@ data:
   database: mongodb
   # database_uri: mongodb://localhost:27017
   #  Remove later
- 
   
   # Or set as complete file contents (even JSON!)
   # keys: | 

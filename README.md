@@ -1,4 +1,4 @@
-# TestDevOpsPipeline
+# DevOpsPipeline
 To automatically deploy and configure containerized elasticsearcg on the Kubernetes (Minikube). 
 As I do not have a powerful home laptop, I have made used of AWS student subscription instance for Jenkins and GCP Instance to host minikube.
 The approach that I have followed is shortly described below:

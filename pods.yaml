@@ -22,3 +22,8 @@ spec:
       envFrom:
         - configMapRef:
             name: elasticsearch-configmap
+      readinessProbe:
+       httpGet:
+         path: /
+         port: 8080
+       timeoutSeconds: 2

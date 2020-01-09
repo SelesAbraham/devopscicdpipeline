@@ -11,10 +11,10 @@ RUN apk update && \
     augtool 'set /files/etc/ssh/sshd_config/AuthorizedKeysFile ".ssh/authorized_keys /etc/authorized_keys/%u"' && \
     augtool 'set /files/etc/ssh/sshd_config/PermitRootLogin yes' && \
     augtool 'set /files/etc/ssh/sshd_config/PasswordAuthentication yes' && \
-    augtool 'set /files/etc/ssh/sshd_config/Port 22' && \
+    augtool 'set /files/etc/ssh/sshd_config/Port 80' && \
     cp -a /etc/ssh /etc/ssh.cache && \
     ssh-keygen -A && \
     rm -rf /var/cache/apk/* && \
     #mkdir /var/run/sshd && \
     echo 'root:root' | chpasswd
-EXPOSE 22
+EXPOSE 80

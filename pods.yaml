@@ -22,6 +22,11 @@ spec:
       envFrom:
         - configMapRef:
             name: elasticsearch-configmap
+      livenessProbe:
+       httpGet:
+         path: /
+         port: 8080
+       initialDelaySeconds: 5
       readinessProbe:
        httpGet:
          path: /

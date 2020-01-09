@@ -17,5 +17,4 @@ RUN apk update && \
     rm -rf /var/cache/apk/* && \
     #mkdir /var/run/sshd && \
     echo 'root:root' | chpasswd
-RUN chown -R $USER $HOME/.kube $HOME/.minikube
 EXPOSE 22

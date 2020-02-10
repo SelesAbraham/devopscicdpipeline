@@ -1,12 +1,8 @@
-  apiVersion: v1
-  kind: ConfigMap
-  metadata:
-    name: kube-monkey-config-map
-    namespace: kube-system
-  data:
-    config.toml: |
-      [kubemonkey]
-      run_hour = 8
-      start_hour = 10
-      end_hour = 16
-      blacklisted_namespaces = ["kube-system"]
+kind: ConfigMap 
+apiVersion: v1 
+metadata:
+  name: elasticsearch-configmap 
+data:
+  # Configuration values can be set as key-value properties
+  database: mongodb
+  # database_uri: mongodb://localhost:27017

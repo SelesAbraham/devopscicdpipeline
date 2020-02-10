@@ -3,12 +3,6 @@ kind: Elasticsearch
 metadata:
   name: quickstart
 spec:
-  labels:
-    kube-monkey/enabled: "enabled"
-    kube-monkey/identifier: "deployment-name"
-    kube-monkey/mtbf: '2'
-    kube-monkey/kill-mode: "fixed"
-    kube-monkey/kill-value: "1"
   version: 7.5.1
   nodeSets:
   - name: default

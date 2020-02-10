@@ -25,15 +25,15 @@ node {
 
      stage('Kubernetes Setup'){
          sshagent(['instance-2']) {
-            sh "scp -o StrictHostKeyChecking=no services.yaml pods.yaml quickstart-kibana.yaml ConfigMap.yaml deployment.yaml seles2112@35.232.241.193:/home/seles2112/"
+            sh "scp -o StrictHostKeyChecking=no services.yaml pods.yaml quickstart-kibana.yaml ConfigMap.yaml deployment.yaml seles2112@34.68.198.37:/home/seles2112/"
             script{
                 try{
-                    sh "ssh seles2112@35.232.241.193 kubectl apply -f https://download.elastic.co/downloads/eck/1.0.0-beta1/all-in-one.yaml"
-                    sh "ssh seles2112@35.232.241.193 kubectl apply -f ."
+                    sh "ssh seles2112@34.68.198.37 kubectl apply -f https://download.elastic.co/downloads/eck/1.0.0-beta1/all-in-one.yaml"
+                    sh "ssh seles2112@34.68.198.37 kubectl apply -f ."
                    // sh "kubectl get deployments -n kube-system"
                     
                 }catch(e) {
-                    sh "ssh seles2112@35.232.241.193 kubectl create -f ."
+                    sh "ssh seles2112@34.68.198.37 kubectl create -f ."
                 }
             }  
          }  
